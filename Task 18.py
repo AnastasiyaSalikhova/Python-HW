@@ -4,13 +4,17 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
-items = [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]
-x = 0
-def nearest_value(items, x):
-    found = items[0]
-    for item in items:
-        if abs(item - x) < abs(found - x):
-            found = item
-    return found
+# items = [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]
+# x = 0
+# def nearest_value(items, x):
+#     found = items[0]
+#     for item in items:
+#         if abs(item - x) < abs(found - x):
+#             found = item
+#     return found
 
-print(f'Ближайшее число к {x} в списке {items} является {nearest_value(items, x)}')
+# print(f'Ближайшее число к {x} в списке {items} является {nearest_value(items, x)}')
+N = int(input())
+lst = map(int, (input().split()))
+x = int(input())
+print(min(lst, key=lambda a:abs(a-x)))
